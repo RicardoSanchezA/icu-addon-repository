@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.3
+
+- Publish presence and activity records so the ICU dashboard can show the latest
+  presence transition separately from other runtime activity.
+
 ## 0.5.2
 
 - Watch every light's and switch's own state continuously instead of only
