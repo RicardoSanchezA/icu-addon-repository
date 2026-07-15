@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0
+
+- Add smart-plug/switch entity support: switches follow an area's lighting
+  on/off state, with an optional per-area brightness threshold (reading the
+  area's real light brightness from Home Assistant) that turns them off
+  below a configurable percentage and back on once brightness recovers.
+
 ## 0.4.1
 
 - Fix Supervisor discovery: the announced service now matches the Python
