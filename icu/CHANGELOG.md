@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.5.2
+
+- Watch every light's and switch's own state continuously instead of only
+  ICU's own dispatched actions, so a light or switch changed by a physical
+  control, the frontend, or a foreign automation is no longer invisible to
+  reconciliation, profile re-application, or manual-dark enforcement.
+- Fix switch-only areas (a smart plug with no separately controlled light):
+  they now correctly activate from motion, a button press, or clearing
+  manual-dark, rather than only ever being gated on having light entities.
+- Add diagnostic logging for successful lighting dispatches, detected entity
+  conflicts, and rejected commands (previously only failures and the HA
+  WebSocket connection lifecycle were logged).
+- Supervisor discovery now refreshes periodically instead of registering
+  once at startup, retrying independently on failure.
+
 ## 0.5.1
 
 - Areas can now have multiple light entities, dispatched as one batched
