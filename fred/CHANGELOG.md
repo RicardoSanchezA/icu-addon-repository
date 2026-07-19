@@ -10,6 +10,8 @@
 - Engine contract v2/schema 3: `fred_state_update` bus event, `FRED_*`
   environment variables, no `profile_entity` helper references -- no Home
   Assistant helper entity participates in any decision.
+- Add `max_occupants`, passed through to the engine as `FRED_MAX_OCCUPANTS`
+  for the multi-Glower track scaffold.
 
 ## 0.8.0
 

@@ -18,5 +18,7 @@ discovery:
 backup: hot
 options:
   observer_mode: false
+  max_occupants: 2
 schema:
   observer_mode: bool
+  max_occupants: int(1,16)
