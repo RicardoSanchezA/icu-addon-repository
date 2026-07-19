@@ -20,3 +20,10 @@ whatever is currently controlling your lights before trusting it with real
 control. This is not time-bounded: leave it on for as long as you want to
 observe, and turn it off (and restart the add-on) once you're ready for FrED
 to actually control lights.
+
+### `max_occupants`
+
+Sets the maximum number of occupants FrED should model for the durable
+multi-Glower track scaffold. The default is `2`; accepted values are `1`
+through `16`. FrED refuses to start if the environment value fails this
+range check, so bare-container runs and add-on runs use the same limit.
