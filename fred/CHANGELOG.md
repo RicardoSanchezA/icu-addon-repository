@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.10.0
+
+- Rebuild the engine image for protocol v3, which reports anonymous occupant
+  aggregates for Phase B UI support.
+
 ## 0.9.0
 
 - The FrED cutover. The add-on is now **FrED Engine**: slug `fred`
