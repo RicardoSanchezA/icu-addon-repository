@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.9.0
+
+- The FrED cutover. The add-on is now **FrED Engine**: slug `fred`
+  (a fresh install from Supervisor's perspective -- the old `icu_engine`
+  add-on is uninstalled at cutover), image
+  `ghcr.io/ricardosancheza/freds-crib`, Supervisor discovery service
+  `fred` (pairs with the `fred` Home Assistant integration).
+- Engine contract v2/schema 3: `fred_state_update` bus event, `FRED_*`
+  environment variables, no `profile_entity` helper references -- no Home
+  Assistant helper entity participates in any decision.
+
 ## 0.8.0
 
 - The engine now owns per-area lighting profile values. New

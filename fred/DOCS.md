@@ -1,7 +1,7 @@
-# ICU Engine
+# FrED Engine
 
-ICU Engine is the native inference backend for the ICU Home Assistant
-integration. Install and start the add-on, then add ICU from **Settings >
+FrED Engine is the native inference backend for the FrED Home Assistant
+integration. Install and start the add-on, then add FrED from **Settings >
 Devices & services**. Supervisor discovery supplies the private endpoint and
 credential automatically.
 
@@ -13,10 +13,10 @@ includes in add-on backups.
 
 ### `observer_mode`
 
-When enabled, ICU computes and logs every lighting decision exactly as it
+When enabled, FrED computes and logs every lighting decision exactly as it
 normally would, but never calls a real Home Assistant service -- nothing
-about your home ever changes. Use this to compare ICU's decisions against
+about your home ever changes. Use this to compare FrED's decisions against
 whatever is currently controlling your lights before trusting it with real
 control. This is not time-bounded: leave it on for as long as you want to
-observe, and turn it off (and restart the add-on) once you're ready for ICU
+observe, and turn it off (and restart the add-on) once you're ready for FrED
 to actually control lights.
