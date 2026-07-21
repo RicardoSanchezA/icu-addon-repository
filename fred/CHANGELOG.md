@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.10.7
+
+- Fix the Home Console under Home Assistant ingress by keeping the layout asset
+  URL relative and aligning `/ui/v1/state` snapshot cursors with the SSE event
+  stream.
+
 ## 0.10.6
 
 - Expose the FrED Home Console through Home Assistant ingress and a
