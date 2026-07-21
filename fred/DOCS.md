@@ -9,6 +9,32 @@ The add-on stores its instance identity, API credential, accepted
 configuration, and durable command state under `/data`, which Home Assistant
 includes in add-on backups.
 
+## Home Console
+
+The add-on serves the FrED Home Console at `/ui/` and exposes it through
+Home Assistant ingress. After the add-on starts, open **FrED Home** in the
+sidebar. The browser never receives the backend bearer token: HA session
+authentication is the trust boundary, and the engine accepts ingress-proxied
+UI requests that carry Supervisor's `X-Ingress-Path` header.
+
+### Auth model
+
+- **Sidebar / ingress:** Supervisor authenticates the HA user, proxies the
+  browser to the add-on, and injects `X-Ingress-Path`. The engine treats a
+  non-empty `X-Ingress-Path` as sufficient for `/ui/v1/*` only.
+- **Integration API (`/api/v1/*`):** always requires the backend bearer token.
+  Ingress headers never authorize configuration or integration commands.
+- **Standalone dogfood:** open the engine `/ui/` directly and paste the bearer
+  token when prompted (stored in `sessionStorage` for the tab only).
+
+This matches the usual Home Assistant add-on tradeoff: the container network
+is assumed not to be reachable by arbitrary LAN clients who could forge
+`X-Ingress-Path`. Do not publish the add-on port directly on the LAN without
+an additional network boundary.
+
+The Lovelace **FrED Engine** dashboard remains available as the detailed
+control/debug fallback.
+
 ## Options
 
 ### `observer_mode`
