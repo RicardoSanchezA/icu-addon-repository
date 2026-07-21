@@ -15,10 +15,11 @@ homeassistant: 2026.7.0
 homeassistant_api: true
 ingress: true
 ingress_port: 8099
-ingress_entry: /ui/
+ingress_entry: ui/
 ingress_stream: true
 panel_icon: mdi:floor-plan
 panel_title: FrED Home
+panel_admin: false
 discovery:
   - fred
 backup: hot
