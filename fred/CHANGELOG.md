@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.11.4
+
+- Fix the Home Console highlighting the wrong guest room: the `cuarto_visitas`
+  and `cuarto_visitas__2` region ids were on each other's rectangles.
+- Record occupant-count-floor retentions and weaken a placement once a
+  clear-wave shows the body moved on (Phases 1-2). No body is ever deleted.
+- Adopt a re-minted backend token on `401` instead of deadlocking when the
+  add-on rotates its credential (C7).
+
 ## 0.11.3
 
 - **Interior-door split observability**: log the full watch lifecycle -- armed,
