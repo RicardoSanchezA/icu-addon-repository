@@ -1,3 +1,8 @@
+## 0.10.9
+
+- Remediation: document load-bearing ingress/network boundary for UI auth.
+- Coordinate with freds-crib / integration 0.10.9 (timer, recovery, durability fixes).
+
 # Changelog
 
 ## 0.10.8
