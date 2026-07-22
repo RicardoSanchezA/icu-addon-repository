@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.11.0
+
+- Configuration schema **5**: remove unused `door_evidence_seconds` option (never
+  consumed by the engine).
+- **Upgrade order (load-bearing):** update the FrED Home Assistant integration
+  first, then this add-on. Integration-first keeps lighting decisions running
+  while the engine still holds a schema-4 config; add-on-first would quarantine
+  configuration and leave the home without FrED lighting until Core catches up.
+
 ## 0.10.9
 
 - Remediation: document load-bearing ingress/network boundary for UI auth.
