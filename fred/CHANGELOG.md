@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.11.3
+
+- **Interior-door split observability**: log the full watch lifecycle -- armed,
+  matured, held-untrusted, expired, cancelled -- plus the split outcome. A door
+  close that never becomes a split was previously indistinguishable in the logs
+  from a door FrED never saw.
+- A credible closed-door split may now reclaim a quiet occupant-count-floor
+  retained track at `max_occupants`, correcting placement while preserving the
+  body count. Ambiguous pending-spawn motion still cannot.
+- Mark an area stale when it loses sensor observability (`Active -> Unknown`)
+  instead of leaving it active indefinitely.
+
 ## 0.11.2
 
 - Coordinated release: engine fix for areas that lose sensor observability
