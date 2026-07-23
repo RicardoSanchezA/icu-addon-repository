@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.11.6
+
+- Stop a clear that a seated track already accounts for from being read as
+  evidence that some other body moved into that area, which could relocate a
+  still occupant's placement and disable the engine on their next motion.
+
 ## 0.11.5
 
 - Preserve automation through contradicted closed-door placements by relocating
