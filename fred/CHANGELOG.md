@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.11.7
+
+- Replace the enabled/disabled model with explicit engine modes: `off`
+  (observe-only), `dumb_home` (simple motion lighting), and `smart_home` (full
+  tracking). An impossible presence model now degrades to `dumb_home` instead of
+  switching the house off, so lighting keeps working while a notification and
+  `binary_sensor.fred_degraded` explain why.
+- Reset now takes the number of people home, seeding tracking from ground truth
+  instead of a guess.
+- Add engine mode controls, reset, and an activity feed to the Home Console; the
+  Lovelace dashboard becomes a thin pointer to it.
+- Bump the FrED protocol to v4 (engine and integration release together).
+
 ## 0.11.6
 
 - Stop a clear that a seated track already accounts for from being read as
